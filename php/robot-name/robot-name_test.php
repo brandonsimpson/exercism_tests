@@ -19,7 +19,7 @@ class RobotTest extends PHPUnit_Framework_TestCase
 
     public function testNameSticks()
     {
-        $this->markTestSkipped();
+        //$this->markTestSkipped();
         $old = $this->robot->getName();
 
         $this->assertSame($this->robot->getName(), $old);
@@ -27,7 +27,7 @@ class RobotTest extends PHPUnit_Framework_TestCase
 
     public function testDifferentRobotsHaveDifferentNames()
     {
-        $this->markTestSkipped();
+        //$this->markTestSkipped();
         $other_bot = new Robot();
 
         $this->assertNotSame($other_bot->getName(), $this->robot->getName());
@@ -37,7 +37,7 @@ class RobotTest extends PHPUnit_Framework_TestCase
 
     public function testresetName()
     {
-        $this->markTestSkipped();
+        //$this->markTestSkipped();
         $name1 = $this->robot->getName();
 
         $this->robot->reset();

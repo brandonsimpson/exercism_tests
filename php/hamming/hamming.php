@@ -1,4 +1,5 @@
 <?php
+
 function distance($a, $b) {
     
     $alen = $count = strlen($a);
@@ -17,4 +18,19 @@ function distance($a, $b) {
     }
     
     return $count;
+}
+
+function distance2($a, $b)
+{
+   $length=strlen($a);
+    if($length !== strlen($b)){
+        throw new InvalidArgumentException('DNA strands must be of equal length.');
+    }
+    $errorCount=0;
+    for($i=0;$i<$length;$i++){
+        if($a[$i] !== $b[$i]){
+            $errorCount++;
+        }
+    }
+    return $errorCount;
 }

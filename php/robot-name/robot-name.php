@@ -17,6 +17,8 @@ class Robot
     
     // create unique random robo name such as RX837 or BC811
     private function newName() {
+        echo (microtime(true)) . PHP_EOL;
+        printf("uniqid('', true): %s\r\n", uniqid('', true)) . PHP_EOL;
         return substr(str_shuffle(implode(range('A', 'Z'))), 0, 2) . substr(((double)microtime() * 1000000), -3);
     }
 }

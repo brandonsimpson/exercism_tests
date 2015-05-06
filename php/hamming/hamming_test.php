@@ -4,7 +4,7 @@ require "hamming.php";
 class HammingComparatorTest extends PHPUnit_Framework_TestCase
 {
 
-
+    
     protected $dna1;
     protected $dna2;
 
@@ -18,7 +18,7 @@ class HammingComparatorTest extends PHPUnit_Framework_TestCase
     public function test1() {
         $time_start = microtime(true);
 
-        $this->assertEquals(742, distance($this->dna1, $this->dna2));
+        $this->assertEquals(742, distance2($this->dna1, $this->dna2));
 
         $time_end = microtime(true);
         $execution_time = $time_end - $time_start;
@@ -35,7 +35,8 @@ class HammingComparatorTest extends PHPUnit_Framework_TestCase
         echo 'Test2 Execution Time: ' . $execution_time . PHP_EOL;
     }
     
-    /*
+   
+    
     public function testNoDifferenceBetweenIdenticalStrands()
     {
         $this->assertEquals(0, distance('A', 'A'));
@@ -83,5 +84,6 @@ class HammingComparatorTest extends PHPUnit_Framework_TestCase
         $this->setExpectedException('InvalidArgumentException', 'DNA strands must be of equal length.');
         distance('GGACG', 'AGGACGTGG');
     }
-    */
+    
+
 }
